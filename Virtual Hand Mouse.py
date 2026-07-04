@@ -3,6 +3,7 @@ from cvzone.HandTrackingModule import HandDetector
 import pyautogui as p
 import math
 import time
+
 cap = cv2.VideoCapture(0)
 click = False
 drag = False
