@@ -10,7 +10,7 @@ detector = HandDetector(maxHands=1)
 
 screen_w, screen_h = p.size()
 
-# متغیرهای Smoothing
+
 plocX, plocY = 0, 0
 clocX, clocY = 0, 0
 smoothening = 7
@@ -27,7 +27,7 @@ while True:
     if not success:
         continue
 
-    # آینه‌ای کردن تصویر
+
     img = cv2.flip(img, 1)
 
     h, w, _ = img.shape
@@ -48,7 +48,7 @@ while True:
         thumb[1] - index[1]
         )
 
-        # تبدیل مختصات دوربین به مختصات مانیتور
+       
         mouse_x = int((x / w) * screen_w)
         mouse_y = int((y / h) * screen_h)
 
@@ -81,7 +81,7 @@ while True:
 
         ptime = ctime
 
-    # ESC برای خروج
+    
     if cv2.waitKey(1) & 0xFF == 27:
         break
 
